@@ -7,12 +7,7 @@ height: 100vh;
 font-family: 'BioRhyme', serif;
 }
 
-/* Navbar Component */
-nav.navbar {
-    background-color: hsl(347, 78%, 58%);
-    opacity: 0.9;
-}
-nav.navbar .navbar-brand{
-    font-family: 'BioRhyme', serif;
-    font-size: 300px;
+/* Footer Component */
+.footer div{
+    background-color: #FFF3E4;
 }
