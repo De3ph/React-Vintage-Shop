@@ -1,13 +1,19 @@
 div.App{
-background-color: #191919;
 background-color: #FEEFDE;
 color: #000000 !important;
-height: 100vh;
-
 font-family: 'BioRhyme', serif;
+line-height: 1.3rem;
 }
 
 /* Footer Component */
-.footer div{
-    background-color: #FFF3E4;
+.footer .social-icon-instagram{
+    color:#af407f;
+}
+
+.footer .social-icon-youtube{
+    color: #FF4301;
+}
+
+.footer .social-icon-twitter{
+    color: #1DA1F2;
 }

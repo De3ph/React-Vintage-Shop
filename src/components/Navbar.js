@@ -16,7 +16,7 @@ function Navbar(props) {
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav w-100 justify-content-evenly">
             {links.map((link) => {
-              return <Link className="my-1" style={{textDecoration : 'none' , color:'black'}} to={link.to} key={link.to}>{link.content}</Link>
+              return <Link className="py-2 my-1 fs-4" style={{textDecoration : 'none' , color:'black'}} to={link.to} key={link.to}>{link.content}</Link>
             })}
           </div>
         </div>

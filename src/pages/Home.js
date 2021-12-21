@@ -1,6 +1,17 @@
+import ItemTable from "../components/ItemTable";
+
 function Home() {
     return(
-        <div>Home</div>
+
+        <main>
+             <div className="container">
+            home 
+            <ItemTable />
+            </div>
+        </main>
+
+       
+        
     );
 }
 
