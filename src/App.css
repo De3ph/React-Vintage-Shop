@@ -17,3 +17,7 @@ line-height: 1.3rem;
 .footer .social-icon-twitter{
     color: #1DA1F2;
 }
+
+.item-table{
+    column-gap: 1px;
+}

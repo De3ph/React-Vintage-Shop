@@ -39,29 +39,20 @@ function ItemTable(props) {
         'sellerName': 'Hamit',
         'Itemid': 4
     }]
-    
-    let end = 3;
-    let start = 0;
-
-    
-    let createRow = (arg)=>{
-        let a = <div className="row my-2 gy-3">{
-            arg.map((argItem)=>{
-                return <Item itemInfos={argItem} key={argItem.Itemid}></Item>
-            })
-        }</div>
-
-        return a;
-    }
 
     return (
-        <div className="container">
-            {createRow(items.slice(0,3))}
-            {createRow(items.slice(3,8))}
-        </div>
+        <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xxl-4 g-3">
+        
+        {items.map((item)=>{
+            return <Item itemInfos={item} key={item.Itemid} />
+        })}
+      </div>
+    </div>
+  </div>
     );
 }
 
 export default ItemTable;
-
-// return <Item className='col-sm-4' itemInfos={item} key={item.Itemid}></Item>
