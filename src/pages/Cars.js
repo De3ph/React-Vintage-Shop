@@ -1,6 +1,8 @@
 function Cars() {
     return ( 
-        <div>Cars</div>
+        <main>
+            cars
+        </main>
      );
 }
 

@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom/cjs/reac
 
 import Cart from './pages/Cart';
 import Cars from './pages/Cars';
-import Dress from './pages/Dress';
 import Home from './pages/Home';
-import Game from './pages/Game';
+import Game from './pages/Furniture';
+import WallArts from './pages/WallArts';
 import Seller from './pages/Seller';
 
 import Navbar from './components/Navbar';
@@ -17,10 +17,10 @@ import Footer from './components/Footer';
 function App() {
 
   const Navlinks = [
-    { 'to': '/dress', 'content': 'Dress' },
-    { 'to': '/game', 'content': 'Game' },
-    { 'to': '/cart', 'content': 'Cart' },
-    { 'to': '/cars', 'content': 'Cars' }
+    { 'to': '/wallArts', 'content': 'Wall Arts' },
+    { 'to': '/furniture', 'content': 'Furniture' },
+    { 'to': '/cars', 'content': 'Cars' },
+    { 'to': '/cart', 'content': <i class="bi bi-cart fs-1"></i> }
 
   ];
 
@@ -48,11 +48,11 @@ function App() {
             <Home />
           </Route>
 
-          <Route path='/dress'>
-            <Dress />
+          <Route path='/wallArts'>
+            <WallArts />
           </Route>
 
-          <Route path='/Game'>
+          <Route path='/game'>
             <Game />
           </Route>
 

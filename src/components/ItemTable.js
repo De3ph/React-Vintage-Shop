@@ -4,40 +4,13 @@ function ItemTable(props) {
 
     // const items = props.items;
     let items = [{
+        'Itemid': 0,
         'ItemName': 'cup',
         'imageLink': 'asddsa',
         'itemText': 'Vintage Cup',
         'sellerAvatarLink': 'dsa',
         'sellerName': 'Hamit',
-        'Itemid': 0
-    }, {
-        'ItemName': 'cup',
-        'imageLink': 'asddsa',
-        'itemText': 'Vintage Cup',
-        'sellerAvatarLink': 'dsa',
-        'sellerName': 'Hamit',
-        'Itemid': 1
-    }, {
-        'ItemName': 'cup',
-        'imageLink': 'asddsa',
-        'itemText': 'Vintage Cup',
-        'sellerAvatarLink': 'dsa',
-        'sellerName': 'Hamit',
-        'Itemid': 2
-    }, {
-        'ItemName': 'cup',
-        'imageLink': 'asddsa',
-        'itemText': 'Vintage Cup',
-        'sellerAvatarLink': 'dsa',
-        'sellerName': 'Hamit',
-        'Itemid': 3
-    }, {
-        'ItemName': 'cup',
-        'imageLink': 'asddsa',
-        'itemText': 'Vintage Cup',
-        'sellerAvatarLink': 'dsa',
-        'sellerName': 'Hamit',
-        'Itemid': 4
+        'itemCategory':'Drink'
     }]
 
     return (

@@ -1,6 +1,6 @@
 function Seller() {
     return ( 
-        <div>Seller</div>
+        <main>Seller</main>
      );
 }
 

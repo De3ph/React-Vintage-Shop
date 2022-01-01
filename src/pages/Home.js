@@ -1,17 +1,20 @@
-import ItemTable from "../components/ItemTable";
+import Hero from "../components/Hero";
+import bird from '../images/bird.svg'
 
 function Home() {
-    return(
+
+    let text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad esse, molestiae sunt incidunt iusto, voluptate, illo sapiente placeat illum vero veniam voluptatem ipsum?';
+    return (
 
         <main>
-             <div className="container">
-            home 
-            <ItemTable />
-            </div>
+            <Hero image_link={bird} description_title="lorem23" description_text={text}></Hero>
+            <Hero image_link={bird} description_title="lorem23" description_text={text}></Hero><Hero image_link={bird} description_title="lorem23" description_text={text}></Hero><Hero image_link={bird} description_title="lorem23" description_text={text}></Hero>
+            
+
         </main>
 
-       
-        
+
+
     );
 }
 

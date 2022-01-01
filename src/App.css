@@ -1,23 +1,41 @@
-div.App{
-background-color: #FEEFDE;
-color: #000000 !important;
-font-family: 'BioRhyme', serif;
-line-height: 1.3rem;
+div.App {
+  /* background-color: #feefde;
+  background-color: #D3E4CD; */
+  /* color: #EFB08C !important; */
+  font-family: "BioRhyme", serif;
+  line-height: 1.3rem;
+}
+
+.hide{
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
 /* Footer Component */
-.footer .social-icon-instagram{
-    color:#af407f;
+.footer .social-icon-instagram {
+  color: #af407f;
 }
 
-.footer .social-icon-youtube{
-    color: #FF4301;
+.footer .social-icon-youtube {
+  color: #ff4301;
 }
 
-.footer .social-icon-twitter{
-    color: #1DA1F2;
+.footer .social-icon-twitter {
+  color: #1da1f2;
 }
 
-.item-table{
-    column-gap: 1px;
+.item-table {
+  column-gap: 1px;
+}
+
+.main-title-font {
+  font-family: "BioRhyme", serif;
+  font-family: "Tangerine", cursive;
+}
+
+@media screen and (min-width:1440px ) {
+  .extend-container{
+    max-width: 100% !important;
+  }
 }
