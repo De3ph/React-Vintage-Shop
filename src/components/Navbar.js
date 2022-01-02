@@ -7,7 +7,7 @@ function Navbar(props) {
     
     <div className="main-navbar container-fluid">
       <div className="row py-1">
-      <Link to='/' className="navbar-brand" style={{color:'black'}}> <h1 className="display-1 main-title-font text-center">Gold's Vintage Shop</h1> </Link> 
+      <Link to='/' className="navbar-brand" style={{color:'black'}}> <h1 className="display-1 mt-5 main-title-font text-center animate__animated animate__fadeInUp">Gold's Vintage Shop</h1> </Link> 
       </div>
       <div className="row py-1">
       <nav className="navbar navbar-expand-lg bg-transparent mb-2">

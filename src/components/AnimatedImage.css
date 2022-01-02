@@ -1,0 +1,6 @@
+.Animated-image .mask-img{
+    mask-image: url('../images/a.svg');
+    -webkit-mask-image: url('../images/a.svg');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+}

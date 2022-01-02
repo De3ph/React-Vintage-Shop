@@ -39,3 +39,12 @@ div.App {
     max-width: 100% !important;
   }
 }
+
+.maskThis{
+  mask-image: url('./images/Animated\ Shape.svg');
+  -webkit-mask-image: url('./images/Animated\ Shape.svg');
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}

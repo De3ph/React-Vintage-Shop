@@ -1,13 +1,14 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
+import 'animate.css'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom/cjs/react-router-dom.min';
 
-import Cart from './pages/Cart';
-import Cars from './pages/Cars';
 import Home from './pages/Home';
-import Game from './pages/Furniture';
 import WallArts from './pages/WallArts';
+import Furniture from './pages/Furniture';
+import Cars from './pages/Cars';
+import Cart from './pages/Cart';
 import Seller from './pages/Seller';
 
 import Navbar from './components/Navbar';
@@ -52,8 +53,8 @@ function App() {
             <WallArts />
           </Route>
 
-          <Route path='/game'>
-            <Game />
+          <Route path='/furniture'>
+            <Furniture />
           </Route>
 
           <Route path='/cart'>

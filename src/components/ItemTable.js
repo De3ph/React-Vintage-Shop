@@ -1,17 +1,6 @@
 import Item from "./Item";
 
-function ItemTable(props) {
-
-    // const items = props.items;
-    let items = [{
-        'Itemid': 0,
-        'ItemName': 'cup',
-        'imageLink': 'asddsa',
-        'itemText': 'Vintage Cup',
-        'sellerAvatarLink': 'dsa',
-        'sellerName': 'Hamit',
-        'itemCategory':'Drink'
-    }]
+function ItemTable({items}) {  
 
     return (
         <div class="album py-5 bg-light">
