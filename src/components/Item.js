@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Item({ itemInfos }) {
+function Item({ itemInfos , addToCart }) {
 
   const sellerPath = '/seller:' + itemInfos.sellerName;
 
@@ -9,11 +9,11 @@ function Item({ itemInfos }) {
       <div className="card shadow-md">
         <img src={itemInfos.imageLink} alt="" />
         <div className="card-body">
-          <p className="card-text">{itemInfos.itemText}</p>
+          <p className="card-text text-dark">{itemInfos.itemText}</p>
           <div className="d-flex justify-content-around align-items-">
             <div className="d-flex gap-1">
               <Link to={sellerPath} > <button type="button" className="btn btn-sm btn-outline-dark">{itemInfos.sellerName}</button></Link>
-              <button type="button" class="btn btn-sm btn-outline-dark">Add to Cart</button>
+              <button onClick={()=>{addToCart(itemInfos)}} type="button" className="btn btn-sm btn-outline-dark">Add to Cart</button>
             </div>
 
           </div>

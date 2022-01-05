@@ -3,13 +3,14 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import 'animate.css'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom/cjs/react-router-dom.min';
+import { useState } from 'react';
 
 import Home from './pages/Home';
 import WallArts from './pages/WallArts';
 import Furniture from './pages/Furniture';
 import Cars from './pages/Cars';
 import Cart from './pages/Cart';
-import Seller from './pages/Seller';
+import GiftCard from './pages/GiftCard';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -21,16 +22,20 @@ function App() {
     { 'to': '/wallArts', 'content': 'Wall Arts' },
     { 'to': '/furniture', 'content': 'Furniture' },
     { 'to': '/cars', 'content': 'Cars' },
-    { 'to': '/cart', 'content': <i class="bi bi-cart fs-1"></i> }
+    { 'to': '/cart', 'content': <i class="bi bi-cart fs-1 text"></i>}
 
   ];
 
-  const Sellers = [
-    {name:'Kamil İşler'},
-    {name:'Hamit Can Daşçi'},
-    {name:'Ahmet Hakan Demirel'},
-    {name:'Yekta Yüksel'}
-  ];
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (item)=>{
+
+    let newCart = [...cart];
+    newCart.push(item);
+    setCart(newCart);
+    alert("Sepete Eklendi");
+  }
+
 
   return (
 
@@ -38,7 +43,6 @@ function App() {
       <style>
         @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@700&display=swap');
       </style>
-
 
       <div className="App">
         <Navbar links={Navlinks} />
@@ -50,31 +54,31 @@ function App() {
           </Route>
 
           <Route path='/wallArts'>
-            <WallArts />
+            <WallArts addToCart={addToCart} />
           </Route>
 
           <Route path='/furniture'>
-            <Furniture />
+            <Furniture addToCart={addToCart} />
           </Route>
 
           <Route path='/cart'>
-            <Cart />
+            <Cart cart={cart} />
           </Route>
 
           <Route path='/cars'>
-            <Cars />
+            <Cars addToCart={addToCart} />
           </Route>
 
-          <Route path='/seller'>
-            <Seller />
+          <Route path='/giftCard'>
+              <GiftCard />
           </Route>
 
         </Switch>
-
-        <Footer />
+        <Footer bgClass='bg-dark' />
       </div>
 
     </Router>
+
 
   );
 }

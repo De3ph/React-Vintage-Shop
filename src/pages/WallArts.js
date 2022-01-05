@@ -1,24 +1,12 @@
 import ItemTable from '../components/ItemTable';
-import store from '../images/store.jpg';
+import {WallArts_datas} from '../db/WallArts_datas'
 
-function WallArts() {
-
-    let items = [{
-        'itemId': 0,
-        'imageLink': store,
-        'itemText': 'Vintage Cup',
-        'sellerName': 'Hamit',
-        'itemPrice': 7.35,
-        'itemCategory':'Drink',
-    }]
+function WallArts({addToCart}) {
 
     return ( 
         <main>
-            Wall Arts
-
-            
-
-            <ItemTable items={items}></ItemTable>
+            <h1 className="text-center animate__animated animate__jello">WallArts</h1>
+            <ItemTable addToCart={addToCart} items={WallArts_datas}></ItemTable>
         </main>
      );
 }

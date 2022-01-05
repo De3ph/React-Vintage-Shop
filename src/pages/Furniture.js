@@ -1,6 +1,8 @@
-function Furniture() {
+function Furniture({addToCart}) {
     return ( 
-        <main>Furniture</main>
+        <main>
+            <h1 className="text-center animate__animated animate__rotateInDownRight">Furniture</h1>
+        </main>
      );
 }
 

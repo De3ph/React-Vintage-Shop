@@ -1,18 +1,46 @@
 div.App {
-  /* background-color: #feefde;
-  background-color: #D3E4CD; */
-  /* color: #EFB08C !important; */
   font-family: "BioRhyme", serif;
   line-height: 1.3rem;
+  overflow-x:hidden;
+  background: url('./images/wave.svg');
+  color:white;
+  min-height:100vh;
+  max-height:max-content;
+  display:flex;
+  flex-direction:column;
 }
 
-.hide{
-  visibility: hidden;
-  width: 0;
-  height: 0;
+main{
+    flex-grow:1;
+}
+
+/* Navbar Component */
+
+.main-navbar{
+    background-color:transparent;
+}
+
+
+.main-title-font {
+  font-family: "BioRhyme", serif;
+  /* font-family: "Tangerine", cursive; */
+}
+
+.link-text{
+  color: white;
+  text-decoration: none;
+}
+
+.link-text:hover{
+  color: yellow;
 }
 
 /* Footer Component */
+
+.footer{
+    position:sticky;
+}
+
 .footer .social-icon-instagram {
   color: #af407f;
 }
@@ -29,16 +57,6 @@ div.App {
   column-gap: 1px;
 }
 
-.main-title-font {
-  font-family: "BioRhyme", serif;
-  font-family: "Tangerine", cursive;
-}
-
-@media screen and (min-width:1440px ) {
-  .extend-container{
-    max-width: 100% !important;
-  }
-}
 
 .maskThis{
   mask-image: url('./images/Animated\ Shape.svg');
@@ -47,4 +65,64 @@ div.App {
   -webkit-mask-size: cover;
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
+}
+
+main > div.Hero:nth-child(even){
+  min-height: fit-content;
+  max-height: calc(max-content);
+  border: solid 1px black;
+}
+
+main > div.Hero:nth-child(odd){
+  min-height: fit-content;
+  max-height: max-content;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+
+}
+
+.Hero .image-container{
+  clip-path: circle();
+}
+
+.hero-text{
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.cities p{
+    margin-bottom: 3rem;
+    line-height:2em;
+    background-image: linear-gradient( 109.6deg,  rgba(247,253,166,1) 11.2%, rgba(128,255,221,1) 57.8%, rgba(255,128,249,1) 85.9% );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.album{
+    background: rgba( 191, 191, 191, 0.1 );
+/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+backdrop-filter: blur( 0px );
+-webkit-backdrop-filter: blur( 0px );
+border-radius: 10px;
+}
+
+
+@media screen and (min-width:1440px ) {
+  .extend-container{
+    max-width: 100% !important;
+  }
+
+  .hero-text{
+    font-size: 2.6rem;
+    line-height: 2.7rem;
+  }
+}
+
+@keyframes rotate {
+  100%{
+    transform: translate(360deg);
+  }
 }
