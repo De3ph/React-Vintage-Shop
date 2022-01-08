@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 
 function Footer({bgClass}) {
+
+    let emailValue = document.querySelector('#getEmailInput');
+
+    let giveMyEmail = (event)=>{
+        emailValue.value = "";
+        alert('We just received your sell request. We would like to call you as soon as possible.');
+        event.preventDefault();
+    }
+
     return (
         <footer className={"footer ".concat(bgClass)}>
 
@@ -19,11 +28,10 @@ function Footer({bgClass}) {
 
                     <div className={"col-lg text-center pt-3".concat(bgClass)}>
                         <form>
-                            <h3>Would you like to sell something to us?</h3>
-                            <div className={"w-75 mx-auto form-floating mb-3 ".concat(bgClass)}>
-                                <input type="email" className="mb-2 form-control form-control-sm" id="floatingInput" placeholder="name@example.com" />
-                                <label for="floatingInput">Email address</label>
-                                <button className="btn btn-outline-warning">Send</button>
+                            <h3>Would you like to sell something to us? Send us an email and we will call you.</h3>
+                            <div className={"w-75 mx-auto mb-3 ".concat(bgClass)}>
+                                <input id="getEmailInput" type="email" className="mb-2 form-control form-control-sm" placeholder="name@example.com" />
+                                <button onClick={giveMyEmail} className="btn btn-outline-warning">Send my email</button>
                             </div>
                         </form>
                     </div>
