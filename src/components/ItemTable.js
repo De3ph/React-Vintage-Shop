@@ -9,7 +9,7 @@ function ItemTable({items , addToCart}) {
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xxl-4 g-3">
 
         {items.map((item)=>{
-            return <Item addToCart={addToCart} itemInfos={item} key={item.Itemid} />
+            return <Item addToCart={addToCart} itemInfos={item} key={item.itemId} />
         })}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Footer({bgClass}) {
+function Footer({bgClass , addToCart}) {
 
     let emailValue = document.querySelector('#getEmailInput');
 
@@ -9,6 +9,7 @@ function Footer({bgClass}) {
         alert('We just received your sell request. We would like to call you as soon as possible.');
         event.preventDefault();
     }
+
 
     return (
         <footer className={"footer ".concat(bgClass)}>
@@ -21,7 +22,7 @@ function Footer({bgClass}) {
                                 <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/About'>About Us</Link></li>
                                 <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/Contact'>Contact</Link></li>
                                 <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/Locations'>Locations</Link></li>
-                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/GiftCard'>Gift Cards</Link></li>
+                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/giftCard'>Gift Cards</Link></li>
                             </ul>
                         </div>
                     </div>
