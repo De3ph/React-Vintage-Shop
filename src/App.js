@@ -5,12 +5,12 @@ import 'animate.css'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom/cjs/react-router-dom.min';
 import { useState } from 'react';
 
-import Home from './pages/Home';
-import WallArts from './pages/WallArts';
-import Furniture from './pages/Furniture';
-import Cars from './pages/Cars';
-import Cart from './pages/Cart';
-import GiftCard from './pages/GiftCard';
+import Home from './pages/mainContents/Home';
+import WallArts from './pages/mainContents/WallArts';
+import Furniture from './pages/mainContents/Furniture';
+import Cars from './pages/mainContents/Cars';
+import Cart from './pages/mainContents/Cart';
+import GiftCard from './pages/footerPages/GiftCard';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -70,11 +70,11 @@ function App() {
           </Route>
 
           <Route path='/giftCard'>
-              <GiftCard />
+              <GiftCard addToCart={addToCart} />
           </Route>
 
         </Switch>
-        <Footer bgClass='bg-dark' />
+        <Footer bgClass='bg-dark' addToCart={addToCart} />
       </div>
 
     </Router>
