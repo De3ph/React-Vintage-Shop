@@ -18,9 +18,9 @@ function Footer({bgClass}) {
                     <div className={"col-lg pb-3 ".concat(bgClass)}>
                         <div className={"col ".concat(bgClass)}>
                             <ul className="list list-group-flush text-center">
-                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5">About</Link></li>
-                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5">Contact</Link></li>
-                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5">Locations</Link></li>
+                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/About'>About Us</Link></li>
+                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/Contact'>Contact</Link></li>
+                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/Locations'>Locations</Link></li>
                                 <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/GiftCard'>Gift Cards</Link></li>
                             </ul>
                         </div>

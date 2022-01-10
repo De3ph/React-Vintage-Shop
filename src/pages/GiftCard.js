@@ -1,24 +1,14 @@
-function GiftCard({amount}) {
+import ItemTable from "../components/ItemTable";
+import {GiftCard_datas} from "../db/GiftCard_datas"
+
+function GiftCard({addToCart}) {
+
     return (
         <main>
-            <div className="container">
-                <div class='card'>
-                    <div class='card-header'>
-                        <h3 class='fs-3 text-center'>{amount}$ Gift Card</h3>
-                    </div>
-
-                    <div class='card-body'>
-
-                    </div>
-
-                    <div className='card-footer'>
-footer
-                    </div>
-                </div>
-            </div>
-
+            <h2 className="text-center pb-2 animate__animated animate__lightSpeedInLeft">GiftCard</h2>
+            <ItemTable addToCart={addToCart} items={GiftCard_datas}></ItemTable>
         </main>
-     );
+    );
 }
 
 export default GiftCard;
