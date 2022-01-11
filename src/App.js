@@ -16,7 +16,7 @@ import Contact from './pages/footerPages/Contact';
 import Locations from './pages/footerPages/Locations';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
+import AddedToCart from './components/AddedToCart';
 
 function App() {
 
@@ -29,15 +29,20 @@ function App() {
   ];
 
   const [cart, setCart] = useState([]);
+  
+  const [addedToCart, setAddedToCart] = useState(false);
 
   const addToCart = (item)=>{
 
     let newCart = [...cart];
     newCart.push(item);
     setCart(newCart);
-    alert("Sepete Eklendi");
+    setAddedToCart(true);
   }
 
+  const removeAddedToCart = () =>{
+    setAddedToCart(false);
+  }
 
   return (
 
@@ -48,19 +53,19 @@ function App() {
 
       <div className="App">
         <Navbar links={Navlinks} />
-
+        
         <Switch>
-
+        {addedToCart && <AddedToCart callback = {removeAddedToCart} /> }
           <Route exact path='/'>
             <Home />
           </Route>
 
           <Route path='/wallArts'>
-            <WallArts addToCart={addToCart} />
+            <WallArts addToCart={addToCart} cart={cart} />
           </Route>
 
           <Route path='/furniture'>
-            <Furniture addToCart={addToCart} />
+            <Furniture addToCart={addToCart} cart={cart}/>
           </Route>
 
           <Route path='/cart'>
@@ -68,7 +73,7 @@ function App() {
           </Route>
 
           <Route path='/cars'>
-            <Cars addToCart={addToCart} />
+            <Cars addToCart={addToCart} cart={cart}/>
           </Route>
 
           <Route path='/about'>
@@ -84,11 +89,13 @@ function App() {
           </Route>
 
           <Route path='/giftCard'>
-              <GiftCard addToCart={addToCart} />
+              <GiftCard addToCart={addToCart} cart={cart}/>
           </Route>
 
         </Switch>
-        <Footer bgClass='bg-dark' addToCart={addToCart} />
+        <Footer bgClass='bg-dark'/>
+
+        
       </div>
 
     </Router>

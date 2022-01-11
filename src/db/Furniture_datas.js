@@ -4,7 +4,7 @@ import furniture3 from '../images/furnitures/furniture3.jpg'
 
 export const Furniture_datas = [
     {
-        'itemId': 0,
+        'itemId': 5,
         'imageLink': furniture1,
         'itemText': 'Vintage Sofa, Blue',
         'sellerName': 'Jack',
@@ -12,7 +12,7 @@ export const Furniture_datas = [
         'itemCategory': 'Furniture',
     },
     {
-        'itemId': 1,
+        'itemId': 6,
         'imageLink': furniture2,
         'itemText': 'Katelyn Vintage Sofa',
         'sellerName': 'Kate',
@@ -20,7 +20,7 @@ export const Furniture_datas = [
         'itemCategory': 'Furniture',
     },
     {
-        'itemId': 2,
+        'itemId': 7,
         'imageLink': furniture3,
         'itemText': 'Modern Vintage Sofa',
         'sellerName': 'Tommy',
