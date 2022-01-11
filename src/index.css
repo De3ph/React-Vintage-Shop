@@ -1,1 +1,25 @@
+.addedToCart{
+   
+    position: absolute;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    
+}
+
+.addedToCart h3, .addedToCart p{
+    align-self: center;
+    color: black;
+}
+
+.addedToCart img{
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.addedToCart button{
+    margin: auto 0;
+}
 
