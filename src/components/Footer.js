@@ -19,9 +19,9 @@ function Footer({bgClass , addToCart}) {
                     <div className={"col-lg pb-3 ".concat(bgClass)}>
                         <div className={"col ".concat(bgClass)}>
                             <ul className="list list-group-flush text-center">
-                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/About'>About Us</Link></li>
-                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/Contact'>Contact</Link></li>
-                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/Locations'>Locations</Link></li>
+                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/about'>About Us</Link></li>
+                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/contact'>Contact</Link></li>
+                                <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/locations'>Locations</Link></li>
                                 <li className={"list-group-item".concat(bgClass)}><Link className="text-white fs-5" to='/giftCard'>Gift Cards</Link></li>
                             </ul>
                         </div>
