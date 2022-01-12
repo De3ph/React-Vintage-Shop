@@ -1,7 +1,7 @@
 import ItemTable from "../../components/ItemTable";
 import {Furniture_datas} from '../../db/Furniture_datas'
 
-function Furniture({addToCart, cart}) {
+function Furniture({addToCart}) {
     return ( 
         <main>
             <h1 className="text-center animate__animated animate__rotateInDownRight">Furniture</h1>

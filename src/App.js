@@ -10,10 +10,12 @@ import WallArts from './pages/mainContents/WallArts';
 import Furniture from './pages/mainContents/Furniture';
 import Cars from './pages/mainContents/Cars';
 import Cart from './pages/mainContents/Cart';
+
 import GiftCard from './pages/footerPages/GiftCard';
 import About from './pages/footerPages/About';
 import Contact from './pages/footerPages/Contact';
 import Locations from './pages/footerPages/Locations';
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AddedToCart from './components/AddedToCart';
@@ -25,12 +27,9 @@ function App() {
     { 'to': '/furniture', 'content': 'Furniture' },
     { 'to': '/cars', 'content': 'Cars' },
     { 'to': '/cart', 'content': <i class="bi bi-cart fs-1 text"></i>}
-
   ];
 
   const [cart, setCart] = useState([]);
-  
-  const [addedToCart, setAddedToCart] = useState(false);
 
   const addToCart = (item)=>{
 
@@ -39,6 +38,15 @@ function App() {
     setCart(newCart);
     setAddedToCart(true);
   }
+
+  const removeFromCart = (item)=>{
+    let newCart = [...cart];
+    newCart.pop(item);
+    setCart(newCart);
+    alert("Item removed successfully from cart");
+  }
+  
+  const [addedToCart, setAddedToCart] = useState(false);
 
   const removeAddedToCart = () =>{
     setAddedToCart(false);
@@ -55,25 +63,27 @@ function App() {
         <Navbar links={Navlinks} />
         
         <Switch>
-        {addedToCart && <AddedToCart callback = {removeAddedToCart} /> }
+
+        {addedToCart && <AddedToCart removeAddedToCart = {removeAddedToCart} /> }
+          
           <Route exact path='/'>
             <Home />
           </Route>
 
           <Route path='/wallArts'>
-            <WallArts addToCart={addToCart} cart={cart} />
+            <WallArts addToCart={addToCart}/>
           </Route>
 
           <Route path='/furniture'>
-            <Furniture addToCart={addToCart} cart={cart}/>
+            <Furniture addToCart={addToCart} />
           </Route>
 
           <Route path='/cart'>
-            <Cart cart={cart} />
+            <Cart cart={cart} removeFromCart={removeFromCart} />
           </Route>
 
           <Route path='/cars'>
-            <Cars addToCart={addToCart} cart={cart}/>
+            <Cars addToCart={addToCart} />
           </Route>
 
           <Route path='/about'>
@@ -89,13 +99,12 @@ function App() {
           </Route>
 
           <Route path='/giftCard'>
-              <GiftCard addToCart={addToCart} cart={cart}/>
+              <GiftCard addToCart={addToCart} />
           </Route>
 
         </Switch>
         <Footer bgClass='bg-dark'/>
 
-        
       </div>
 
     </Router>

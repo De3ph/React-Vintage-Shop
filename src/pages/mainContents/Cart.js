@@ -1,9 +1,6 @@
-import { useEffect } from "react";
 import ItemTable from "../../components/ItemTable";
 
 function Cart({cart}) {
-
-   
 
     return (
         <main>
