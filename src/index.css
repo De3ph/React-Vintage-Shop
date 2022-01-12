@@ -61,9 +61,9 @@
     display: flex;
     justify-content:flex-end;
 }
-.buttonContainer button{
+.button{
     margin-top: 2rem;
-    margin-right: 30rem;
+    margin-right: 12rem;
 }
 
 .user-info{

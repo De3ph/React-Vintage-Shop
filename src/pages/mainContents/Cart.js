@@ -14,7 +14,7 @@ function Cart({cart, removeFromCart}) {
                 <h2 className='text-white text-center'>Won't you buy something? :( </h2>
             }
             <div className="buttonContainer">
-            { showButton && <Link to ='/buy' className="btn btn-lg btn-success fs-2">Buy</Link>}
+            { showButton && <Link to ='/buy' className="btn btn-lg btn-success fs-2 button">Buy</Link>}
             </div>
 
            
