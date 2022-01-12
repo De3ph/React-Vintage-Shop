@@ -8,7 +8,7 @@ export const Furniture_datas = [
         'imageLink': furniture1,
         'itemText': 'Vintage Sofa, Blue',
         'sellerName': 'Jack',
-        'itemPrice': '15,999',
+        'itemPrice': '15999',
         'itemCategory': 'Furniture',
     },
     {
@@ -16,7 +16,7 @@ export const Furniture_datas = [
         'imageLink': furniture2,
         'itemText': 'Katelyn Vintage Sofa',
         'sellerName': 'Kate',
-        'itemPrice': '25,000',
+        'itemPrice': '25000',
         'itemCategory': 'Furniture',
     },
     {
@@ -24,7 +24,7 @@ export const Furniture_datas = [
         'imageLink': furniture3,
         'itemText': 'Modern Vintage Sofa',
         'sellerName': 'Tommy',
-        'itemPrice': '2,800',
+        'itemPrice': '2800',
         'itemCategory': 'Furniture',
     }
 ];

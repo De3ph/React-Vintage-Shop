@@ -22,7 +22,7 @@ export const GiftCard_datas = [
         'imageLink': giftCard,
         'itemText': 'Gift 3',
         'sellerName': 'From Us',
-        'itemPrice': '1,000',
+        'itemPrice': '1000',
         'itemCategory': 'GiftCard',
     },
     {
@@ -30,7 +30,7 @@ export const GiftCard_datas = [
         'imageLink': giftCard,
         'itemText': 'Gift 4',
         'sellerName': 'From Us',
-        'itemPrice': '10,000',
+        'itemPrice': '10000',
         'itemCategory': 'GiftCard',
     },
 ]

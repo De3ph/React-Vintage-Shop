@@ -10,6 +10,7 @@ import WallArts from './pages/mainContents/WallArts';
 import Furniture from './pages/mainContents/Furniture';
 import Cars from './pages/mainContents/Cars';
 import Cart from './pages/mainContents/Cart';
+import BuyinPage from './pages/mainContents/BuyingPage';
 
 import GiftCard from './pages/footerPages/GiftCard';
 import About from './pages/footerPages/About';
@@ -101,6 +102,9 @@ function App() {
               <GiftCard addToCart={addToCart} />
           </Route>
 
+           <Route path = '/buy'>
+             <BuyinPage cart = {cart}/>
+           </Route> 
         </Switch>
         <Footer bgClass='bg-dark'/>
 

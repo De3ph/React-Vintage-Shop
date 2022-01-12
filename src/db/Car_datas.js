@@ -10,7 +10,7 @@ export const Car_datas = [
         'imageLink': car1,
         'itemText': '1965 Chevrolet Corvette',
         'sellerName': 'Joey',
-        'itemPrice': '69,000',
+        'itemPrice': '69000',
         'itemCategory': 'Car',
     },
     {
@@ -18,7 +18,7 @@ export const Car_datas = [
         'imageLink': car2,
         'itemText': '1958 Jaguar XK150',
         'sellerName': 'Frank',
-        'itemPrice': '189,000',
+        'itemPrice': '189000',
         'itemCategory': 'Car',
     },
     {
@@ -26,7 +26,7 @@ export const Car_datas = [
         'imageLink': car3,
         'itemText': '1969 Chevrolet Camaro',
         'sellerName': 'Frank',
-        'itemPrice': '225,000',
+        'itemPrice': '225000',
         'itemCategory': 'Car',
     },
     {
@@ -34,7 +34,7 @@ export const Car_datas = [
         'imageLink': car4,
         'itemText': '1970 Oldsmobile 442',
         'sellerName': 'Alex',
-        'itemPrice': '46,500',
+        'itemPrice': '46500',
         'itemCategory': 'Car',
     },
     {
@@ -42,7 +42,7 @@ export const Car_datas = [
         'imageLink': car5,
         'itemText': '1967 Shelby GT500',
         'sellerName': 'Michelle',
-        'itemPrice': '295,000',
+        'itemPrice': '295000',
         'itemCategory': 'Car',
     }
 ];
