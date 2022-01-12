@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Navbar({links}) {
+function Navbar({links, removeFunc}) {
 
     let click = ()=>{
 
@@ -24,7 +24,7 @@ function Navbar({links}) {
                   <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="row navbar-nav w-100 justify-content-evenly align-items-center mt-2 mx-auto">
                       {links.map((link) => {
-                        return <Link className="col text-center py-2 my-1 fs-4 make-large link-text"  to={link.to} key={link.to}>{link.content}</Link>
+                        return <Link className="col text-center py-2 my-1 fs-4 make-large link-text"  to={link.to} onClick = {removeFunc} key={link.to}>{link.content} </Link>
                       })}
                     </div>
                   </div>

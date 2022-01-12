@@ -23,3 +23,36 @@
     margin: auto 0;
 }
 
+.footerLinks{
+    text-decoration: none;
+}
+.footerLinks:hover{
+    text-decoration: underline;
+}
+
+.cityImages{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.cityImages img{
+        margin: 4rem 2rem 2rem 2rem;
+        display: block;
+        max-width:100%;
+        max-height:1000px;
+        width: auto;
+        height: auto;
+}
+.cityImages h3{
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+.locationHeader{
+    font-size: 5rem;
+    text-decoration: underline;
+}

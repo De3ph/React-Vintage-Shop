@@ -43,7 +43,6 @@ function App() {
     let newCart = [...cart];
     newCart.pop(item);
     setCart(newCart);
-    alert("Item removed successfully from cart");
   }
   
   const [addedToCart, setAddedToCart] = useState(false);
@@ -60,7 +59,7 @@ function App() {
       </style>
 
       <div className="App">
-        <Navbar links={Navlinks} />
+        <Navbar links={Navlinks} removeFunc = {removeAddedToCart} />
         
         <Switch>
 

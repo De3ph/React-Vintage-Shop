@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 
-function Item({ itemInfos , addToCart, isInCart}) {
+function Item({ itemInfos , addToCart, isInCart, removeFromCart}) {
 
   const buttonText = isInCart ? "Remove from cart" : "Add to cart";
- 
+  const cartToggle = isInCart ? removeFromCart : addToCart;
   return (
     <div className="col">
       <div className="card shadow-md">
@@ -14,7 +14,7 @@ function Item({ itemInfos , addToCart, isInCart}) {
           <div className="d-flex justify-content-around align-items-">
             <div className="d-flex gap-1">
               <button type="button" className="btn btn-sm btn-outline-dark disabled text-dark">{itemInfos.sellerName}</button>
-              <button onClick={()=>{addToCart(itemInfos)}} type="button" className="btn btn-sm btn-outline-dark">{buttonText}</button>
+              <button onClick={()=>{cartToggle(itemInfos)}} type="button" className="btn btn-sm btn-outline-dark">{buttonText}</button>
             </div>
 
           </div>

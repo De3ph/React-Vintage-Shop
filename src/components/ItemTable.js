@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Item from "./Item";
 
-function ItemTable({items , addToCart, isInCart}) {
+function ItemTable({items , addToCart, isInCart, removeFromCart}) {
 
   
 
@@ -10,7 +10,7 @@ function ItemTable({items , addToCart, isInCart}) {
            <div className="container">
               <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xxl-4 g-3">
                  {items.map((item)=>{
-                   return <Item addToCart={addToCart} itemInfos={item} key={item.itemId} isInCart = {isInCart}/>
+                   return <Item addToCart={addToCart} removeFromCart = {removeFromCart} itemInfos={item} key={item.itemId} isInCart = {isInCart}/>
         })}
               </div>
            </div>
