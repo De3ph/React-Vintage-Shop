@@ -75,7 +75,7 @@
     max-width: 1000px;
     width: 100%;
     height: auto;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     padding: 0.5%;
 }
 .user-info p{
