@@ -11,9 +11,9 @@ function Item({ itemInfos , addToCart, isInCart, removeFromCart}) {
   return (
 
     <div className="container">
-      <div className="col">
-        <div className="col-lg-12">
-        <div className="item-card card shadow-md" onMouseEnter = {() => setShowText(false)} onMouseLeave = {() => setShowText(true)}>
+      <div className="col h-100">
+        <div className="col-lg-12 h-100">
+        <div className="item-card card shadow-md h-100" onMouseEnter = {() => setShowText(false)} onMouseLeave = {() => setShowText(true)}>
           <img src={itemInfos.imageLink} alt=""/>
           <div className="card-body">
            {showText && <p className="card-text">{itemInfos.itemText}</p>}
@@ -27,11 +27,11 @@ function Item({ itemInfos , addToCart, isInCart, removeFromCart}) {
             {!showText && <small className="text-ligth fs-5">{itemInfos.itemPrice}$</small>}
         </div>
         </div>
-        
+
       </div>
     </div>
     </div>
-    
+
   );
 }
 
