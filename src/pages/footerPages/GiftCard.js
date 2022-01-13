@@ -5,7 +5,7 @@ function GiftCard({addToCart}) {
 
     return (
         <main>
-            <h2 className="text-center pb-2 animate__animated animate__lightSpeedInLeft">GiftCard</h2>
+            <h2 className="text-center text-warning pb-2 animate__animated animate__lightSpeedInLeft">GiftCard</h2>
             <ItemTable addToCart={addToCart} items={GiftCard_datas}></ItemTable>
         </main>
     );
