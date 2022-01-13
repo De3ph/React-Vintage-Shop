@@ -213,14 +213,16 @@ border-radius: 10px;
 .user-info{
   margin: 2rem auto;
   place-self: center;
-  color: black;
+  color: white;
   font-size: 1.5rem;
   background-color: white;
   max-width: 1000px;
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
+ 
   padding: 0.5%;
+  background-color: transparent;
 }
 .user-info p{
   text-align: end;
@@ -234,8 +236,7 @@ border-radius: 10px;
   background-color: black !important;
   min-height: 230px;
   max-height: 375px;
-  max-width: 275px;
- 
+  max-width: 275px; 
   margin: auto;
 }
 
@@ -244,6 +245,10 @@ border-radius: 10px;
   object-fit:scale-down;
   width: auto;
 
+}
+
+.form-control{
+  border-radius: 0% !important;
 }
 
 

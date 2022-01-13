@@ -104,7 +104,7 @@ function App() {
           </Route>
 
            <Route path = '/buy'>
-             <BuyinPage cart = {cart}/>
+             <BuyinPage cart = {cart} setCart={setCart} />
            </Route> 
         </Switch>
         <Footer bgClass='bg-dark'/>
