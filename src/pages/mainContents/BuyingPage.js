@@ -1,16 +1,27 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Redirect } from "react-router-dom";
 
-const BuyinPage = ({cart}) => {
+const BuyinPage = ({cart , setCart}) => {
 
     let total = 0;
+
+    const [isRedirect , setIsRedirect] = useState(false);
 
     cart.forEach(element => {
         total += Number(element.itemPrice);
     });
+
+    let handleSubmit = (event)=>{
+        event.preventDefault();
+        alert("Successfully bought");
+        setCart([]);
+        setIsRedirect(true);
+    }
    
     return ( 
-       <div className="row g-3 user-info">
+
+       <form className="row g-3 user-info">
+
            <div className="col-md-6">
                <label for="name" className="form-label">Name</label>
                <input className="form-control" id = "name" />
@@ -40,9 +51,10 @@ const BuyinPage = ({cart}) => {
                <input className="form-control" id="date"/>
            </div>
            <p>Total Price: {total}$</p>
-           <button className="btn btn-lg btn-success fs-2">Buy</button>
+           <button onClick={handleSubmit} type="submit" className="btn btn-lg btn-success fs-2 submitButton">Buy</button>
 
-       </div>
+            {true && isRedirect ? <Redirect to="/cart" /> : null}
+       </form>
       
      );
 }
