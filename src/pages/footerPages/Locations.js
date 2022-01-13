@@ -11,7 +11,7 @@ let cityList = ['Paris','Kiev','Bucharest','Hamburg','Milano','Brussels','Califo
 function Locations(){
     return(
         <main>
-            <h2 className="text-center animate__animated animate__rotateInDownRight locationHeader">Locations</h2>
+            <h2 className="text-center text-warning animate__animated animate__rotateInDownRight locationHeader">Locations</h2>
             <div className="cityImages">
                 <h3>İstanbul</h3>
                 <img src={shop1img} alt="" className="cityImage" />
