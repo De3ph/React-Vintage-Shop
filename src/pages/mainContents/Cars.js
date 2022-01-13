@@ -7,7 +7,7 @@ function Cars({addToCart}) {
 
     return (
         <main>
-            <h2 className="text-center pb-2 animate__animated animate__lightSpeedInLeft">Cars</h2>
+            <h2 className="text-center text-warning pb-2 animate__animated animate__lightSpeedInLeft">Cars</h2>
             <ItemTable addToCart={addToCart} items={Car_datas}></ItemTable>
         </main>
     );

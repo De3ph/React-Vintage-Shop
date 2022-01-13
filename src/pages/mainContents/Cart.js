@@ -7,7 +7,7 @@ function Cart({cart, removeFromCart}) {
    
     return (
         <main>
-            <h2 className='text-center'>Cart</h2>
+            <h2 className='text-center text-warning'>Cart</h2>
             {cart.length !==0 ?
                 <ItemTable items={cart} isInCart={true} removeFromCart={removeFromCart} ></ItemTable>
                     :

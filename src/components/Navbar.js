@@ -13,7 +13,7 @@ function Navbar({links, removeFunc}) {
         <div className="main-navbar container-fluid rounded">
 
                 <div className="row py-1">
-                <Link to='/' className="navbar-brand" style={{color:'white'}}> <h1 className="display-1 mt-5 main-title-font text-center animate__animated animate__fadeInUp">Gold's Vintage Shop</h1> </Link>
+                <Link to='/' className="navbar-brand" style={{color:'white'}}> <h1 className="display-1 mt-5 main-title-font text-center animate__animated animate__fadeInUp"> <p className="text-warning">Gold's </p>Vintage Shop</h1> </Link>
                 </div>
                 <div className="row py-1 mt-4">
                 <nav className="navbar navbar-expand-lg bg-transparent mb-2">
