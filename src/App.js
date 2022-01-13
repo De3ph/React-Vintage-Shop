@@ -41,8 +41,9 @@ function App() {
   }
 
   const removeFromCart = (item)=>{
-    let newCart = [...cart];
-    newCart.pop(item);
+    let newCart = cart.filter((eachItem)=>{
+      return item.itemId !== eachItem.itemId;
+    })
     setCart(newCart);
   }
   
