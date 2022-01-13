@@ -27,9 +27,17 @@ const BuyinPage = ({cart}) => {
                <label for="address" className="form-label">Address</label>
                <input className="form-control" id="address" />
            </div>
-           <div className="col-md-12">
+           <div className="col-md-6">
                <label for="card" className="form-label">Card Number</label>
                <input className="form-control" id="card" placeholder="0000-0000-0000-0000"/>
+           </div>
+           <div className="col-md-3">
+               <label for="cvc" className="form-label">CVC</label>
+               <input className="form-control" id="cvc"/>
+           </div>
+           <div className="col-md-3">
+               <label for="date" className="form-label">Expiration Date</label>
+               <input className="form-control" id="date"/>
            </div>
            <p>Total Price: {total}$</p>
            <button className="btn btn-lg btn-success fs-2">Buy</button>
