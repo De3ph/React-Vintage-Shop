@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Redirect } from "react-router-dom";
+import swal from 'sweetalert';
 
 const BuyinPage = ({cart , setCart}) => {
 
@@ -13,7 +14,7 @@ const BuyinPage = ({cart , setCart}) => {
 
     let handleSubmit = (event)=>{
         event.preventDefault();
-        alert("Successfully bought");
+        swal("Successfully bought!","", "success");
         setCart([]);
         setIsRedirect(true);
     }
