@@ -32,7 +32,7 @@ main{
 }
 
 .link-text:hover{
-  color: yellow;
+  color: gold;
 }
 
 /* Footer Component */
@@ -246,6 +246,7 @@ border-radius: 10px;
   width: auto;
 
 }
+
 
 .form-control{
   border-radius: 0% !important;
