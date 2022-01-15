@@ -1,3 +1,4 @@
+import { Button } from "bootstrap";
 import { useEffect, useState } from "react";
 
 
@@ -18,14 +19,12 @@ function Item({ itemInfos , addToCart, isInCart, removeFromCart}) {
           <div className="card-body">
            {showText && <p className="card-text">{itemInfos.itemText}</p>}
             <div className="d-flex justify-content-around align-items-center">
-              <div className="text-center">
-              {!showText && <small className="text-ligth fs-5">{itemInfos.itemPrice}$</small>}
-              </div>
-          </div>
+              {!showText && <small className="text-ligth fs-5 text-center">{itemInfos.itemPrice}$</small>}
+            </div>
         </div>
         <div className="card-footer d-flex gap-1 justify-content-center">
         {!showText && <button onClick={()=>{cartToggle(itemInfos)}} type="button" className="btn btn-md btn-outline-warning">{buttonText}</button>}
-            
+        {showText && <button className="btn btn-md invisible btn-outline-warning">{buttonText}</button>} 
         </div>
         </div>
 
