@@ -1,44 +1,58 @@
 div.App {
   font-family: "BioRhyme", serif;
   line-height: 1.3rem;
-  overflow-x:hidden;
-  background: url('./images/wave.svg');
-  color:white;
-  min-height:100vh;
-  max-height:max-content;
-  display:flex;
-  flex-direction:column;
+  overflow-x: hidden;
+  background: url("./images/wave.svg");
+  color: white;
+  min-height: 100vh;
+  max-height: max-content;
+  display: flex;
+  flex-direction: column;
 }
 
-main{
-    flex-grow:1;
+main {
+  flex-grow: 1;
+}
+
+/* Özelleştirilmiş alert componenti için */
+.swal-overlay {
+  background-color: rgba(1, 2, 2, 0.45);
+}
+
+.swal-button {
+  color: black;
 }
 
 /* Navbar Component */
 
-.main-navbar{
-    background-color:transparent;
+.main-navbar {
+  background-color: transparent;
 }
-
 
 .main-title-font {
   font-family: "BioRhyme", serif;
-  /* font-family: "Tangerine", cursive; */
 }
 
-.link-text{
+.link-text {
   color: white;
   text-decoration: none;
 }
 
-.link-text:hover{
+.link-text:hover {
   color: gold;
 }
 
 /* Footer Component */
 
-.footer{
-    position:sticky;
+.footer {
+  position: sticky;
+}
+
+.footerLinks {
+  text-decoration: none;
+}
+.footerLinks:hover {
+  text-decoration: underline;
 }
 
 .footer .social-icon-instagram {
@@ -53,164 +67,103 @@ main{
   color: #1da1f2;
 }
 
+/* ItemTable componenti için */
 .item-table {
   column-gap: 1px;
 }
 
+.album {
+  background: rgba(191, 191, 191, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+}
 
-.maskThis{
-  mask-image: url('./images/Animated\ Shape.svg');
-  -webkit-mask-image: url('./images/Animated\ Shape.svg');
+/* Hero componentinde yer alan animasyonlu yuvarlak görseller ve yazıları için */
+
+.maskThis {
+  mask-image: url("./images/Animated\ Shape.svg");
+  -webkit-mask-image: url("./images/Animated\ Shape.svg");
   mask-size: cover;
   -webkit-mask-size: cover;
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
 }
 
-main > div.Hero:nth-child(even){
+main > div.Hero:nth-child(even) {
   min-height: fit-content;
   max-height: calc(max-content);
   border: solid 1px black;
 }
 
-main > div.Hero:nth-child(odd){
+main > div.Hero:nth-child(odd) {
   min-height: fit-content;
   max-height: max-content;
   border-left: solid 1px black;
   border-right: solid 1px black;
-
 }
 
-.Hero .image-container{
+.Hero .image-container {
   clip-path: circle();
 }
 
-.hero-text{
+.hero-text {
   font-size: 1.25rem;
   font-weight: 300;
+  line-height: 1.1em;
 }
 
-.cities p{
-    margin-bottom: 3rem;
-    line-height:2em;
-    background-image: linear-gradient( 109.6deg,  rgba(247,253,166,1) 11.2%, rgba(128,255,221,1) 22.5%, rgba(255,128,249,1) 85.9% );
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: flowAnimation 5.2s linear infinite;
-}
-
-.album{
-    background: rgba( 191, 191, 191, 0.1 );
-/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
-backdrop-filter: blur( 0px );
--webkit-backdrop-filter: blur( 0px );
-border-radius: 10px;
-}
-
-
-@media screen and (min-width:1440px ) {
-  .extend-container{
-    max-width: 100% !important;
-  }
-
-  .hero-text{
-    font-size: 2.6rem;
-    line-height: 2.7rem;
-  }
-
-}
-
-@media screen and (max-width:768px){
-  .cities p{
-    display: inline-block;
-    white-space: nowrap;
-    animation-duration: 18s;
-    animation-fill-mode: none;
-  }
+/* animasyonlu şehirlerin yazısı için */
+.cities p {
+  margin-bottom: 3rem;
+  line-height: 2em;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(247, 253, 166, 1) 11.2%,
+    rgba(128, 255, 221, 1) 22.5%,
+    rgba(255, 128, 249, 1) 85.9%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowAnimation 5.2s linear infinite;
 }
 
 
-@keyframes flowAnimation{
-  from{
-    transform: translateX(100%);
-  }
-  to{
-    transform: translateX(-100%);
-  }
-}
-
-.addedToCart{
-   
-  position: absolute;
-  align-items: center;
-  background-color: white;
-  margin: auto;
-  margin-bottom: 50px;
-  max-width: 1000px;
-  
-}
-
-.addedToCart h3, .addedToCart p{
-  align-self: center;
-  color: black;
-}
-
-.addedToCart img{
-  max-height: 300px;
-  max-width: 300px;
-}
-
-.addedToCart button{
-  margin: auto 0;
-}
-
-.footerLinks{
-  text-decoration: none;
-}
-.footerLinks:hover{
-  text-decoration: underline;
-}
-
-.cityImages{
+.cityImages {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
-
 }
 
-.cityImages img{
-      margin: 4rem 2rem 2rem 2rem;
-      display: block;
-      max-width:100%;
-      max-height:1000px;
-      width: auto;
-      height: auto;
+.cityImages img {
+  margin: 4rem 2rem 2rem 2rem;
+  display: block;
+  max-width: 100%;
+  max-height: 1000px;
+  width: auto;
+  height: auto;
 }
-.cityImages h3{
+.cityImages h3 {
   font-size: 3rem;
   margin-top: 3rem;
 }
 
-.locationHeader{
-  font-size: 5rem;
-  text-decoration: underline;
-}
-
-.buttonContainer{
+/* Cart sayfasındaki buy butonu için */
+.buttonContainer {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
-.button{
+.button {
   margin-top: 2rem;
   margin-right: 12rem;
 }
 
-.user-info{
+/* BuyingPage sayfasındaki form için */
+.user-info {
   margin: 2rem auto;
   place-self: center;
   color: white;
@@ -220,36 +173,62 @@ border-radius: 10px;
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
- 
+
   padding: 0.5%;
   background-color: transparent;
 }
-.user-info p{
+.user-info p {
   text-align: end;
 }
 
-
-
-.item-card{
-  padding: 5%;
-  border-radius: 0% !important; 
-  background-color: black !important;
-  min-height: 230px;
-  max-height: 375px;
-  max-width: 275px; 
-  margin: auto;
-}
-
-.item-card img{
-  max-height: 250px;
-  object-fit:scale-down;
-  width: auto;
-
-}
-
-
-.form-control{
+.form-control {
   border-radius: 0% !important;
 }
 
+/* Item componenti için */
+.item-card {
+  padding: 5%;
+  border-radius: 0% !important;
+  background-color: black !important;
+  min-height: 230px;
+  max-height: 375px;
+  max-width: 275px;
+  margin: auto;
+}
 
+.item-card img {
+  max-height: 250px;
+  object-fit: scale-down;
+  width: auto;
+}
+
+/* elle yazılmış media query ler */
+@media screen and (min-width: 1440px) {
+  .extend-container {
+    max-width: 100% !important;
+  }
+
+  .hero-text {
+    font-size: 2.6rem;
+    line-height: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cities p {
+    display: inline-block;
+    white-space: nowrap;
+    animation-duration: 18s;
+    animation-fill-mode: none;
+  }
+}
+
+/* şehir yazılarındaki animasyon */
+@keyframes flowAnimation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

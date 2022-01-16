@@ -1,23 +1,26 @@
 import { useState } from "react";
 import { Redirect } from "react-router-dom";
-import swal from 'sweetalert';
+import {fireAlert} from "../../components/Alert"
 
 const BuyinPage = ({cart , setCart}) => {
 
-    let total = 0;
+    let total = 0; // sepetin toplam maliyeti
 
-    const [isRedirect , setIsRedirect] = useState(false);
+    const [isRedirect , setIsRedirect] = useState(false); 
+    //satın alma işlemi bittikten sonra kullanıcıyı ana sayfaya atmak için kullanıyoruz
 
     cart.forEach(element => {
-        total += Number(element.itemPrice);
+        total += Number(element.itemPrice); //maliyet hesaplama
     });
 
-    let handleSubmit = (event)=>{
+    let handleSubmit = async (event)=>{
         event.preventDefault();
-        swal("Successfully bought!","", "success");
+        await fireAlert("Successfully bought! You will redirect to home page.");
         setCart([]);
         setIsRedirect(true);
     }
+    //kullanıcı satın ala bastıktan sonra yapılacak işlemler
+
    
     return ( 
 
@@ -54,7 +57,8 @@ const BuyinPage = ({cart , setCart}) => {
            <p>Total Price: {total}$</p>
            <button onClick={handleSubmit} type="submit" className="btn btn-lg btn-warning fs-2">Buy</button>
 
-            {true && isRedirect ? <Redirect to="/cart" /> : null}
+            {true && isRedirect ? <Redirect to="/" /> : null} 
+            {/* kullanıcıyı ana sayfaya redirect ediyor eğer koşul doğruysa */}
        </form>
       
      );

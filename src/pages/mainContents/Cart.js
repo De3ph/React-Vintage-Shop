@@ -7,7 +7,8 @@ function Cart({cart, removeFromCart}) {
    
     return (
         <main>
-            <h2 className='text-center text-warning'>Cart</h2>
+            <h1 className='text-center text-warning pb-2'>Cart</h1>
+            {/* sepetin boş mu dolu mu olduğunu kontrol ediyor, eğer sepet boşsa mesaj gösteriyor, dolu ise eklenen itemleri gösteriyor */}
             {cart.length !==0 ?
                 <ItemTable items={cart} isInCart={true} removeFromCart={removeFromCart} ></ItemTable>
                     :

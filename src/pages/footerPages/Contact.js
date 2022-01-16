@@ -2,13 +2,13 @@ import { AiFillPhone } from "react-icons/ai";
 function Contact() {
     return (
         <main>
-            <h2  className="text-center text-warning animate__animated animate__rotateInDownRight locationHeader">Contact</h2>
-            <br/>
+            <h2 className="text-center text-warning animate__animated animate__rotateInDownRight locationHeader">Contact</h2>
+            <br />
             <div className="text-center">
                 <div>
                     <ul>
                         <h2>İstanbul</h2>
-                       <AiFillPhone /> 0232 354 5568 / 0232 354 5569
+                        <AiFillPhone /> 0232 354 5568 / 0232 354 5569
                     </ul>
                     <ul>
                         <h2>London</h2>
@@ -26,10 +26,10 @@ function Contact() {
                         <h2>Manchester</h2>
                         <AiFillPhone /> 020 7986 0323 - 020 7676 0324
                     </ul>
-                    </div>
+                </div>
             </div>
         </main>
-     );
+    );
 }
 
 export default Contact;

@@ -1,12 +1,12 @@
 import React from 'react'
 
-const CityText = ({cityList}) => {
+const CityText = ({ cityList }) => {
 
     let cities = "";
 
 
     cityList.forEach((city, i) => {
-        cities = cities.concat(city," ");
+        cities = cities.concat(city, " ");
     });
 
 

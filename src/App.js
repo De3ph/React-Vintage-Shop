@@ -2,7 +2,7 @@ import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import 'animate.css'
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom/cjs/react-router-dom.min';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import { useState } from 'react';
 
 import Home from './pages/mainContents/Home';
@@ -19,7 +19,8 @@ import Locations from './pages/footerPages/Locations';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import AddedToCart from './components/AddedToCart';
+import { fireAlert } from './components/Alert';  // özelleştirilmiş alert kutucuğu
+
 
 function App() {
 
@@ -27,52 +28,47 @@ function App() {
     { 'to': '/wallArts', 'content': 'Wall Arts' },
     { 'to': '/furniture', 'content': 'Furniture' },
     { 'to': '/cars', 'content': 'Cars' },
-    { 'to': '/cart', 'content': <i class="bi bi-cart fs-1 text"></i>}
+    { 'to': '/cart', 'content': <i class="bi bi-cart fs-1 text"></i> }
   ];
 
   const [cart, setCart] = useState([]);
 
-  const addToCart = (item)=>{
+  const addToCart = (item) => {
 
     let newCart = [...cart];
     newCart.push(item);
     setCart(newCart);
-    setAddedToCart(true);
+    fireAlert("Added to cart successfully!");
+
   }
 
-  const removeFromCart = (item)=>{
-    let newCart = cart.filter((eachItem)=>{
+  const removeFromCart = (item) => {
+    let newCart = cart.filter((eachItem) => {
       return item.itemId !== eachItem.itemId;
     })
     setCart(newCart);
+    fireAlert("Removed from cart successfully!")
   }
-  
-  const [addedToCart, setAddedToCart] = useState(false);
 
-  const removeAddedToCart = () =>{
-    setAddedToCart(false);
-  }
+
 
   return (
 
     <Router>
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@700&display=swap');
-      </style>
 
       <div className="App">
-        <Navbar links={Navlinks} removeFunc = {removeAddedToCart} />
-        
+        <Navbar links={Navlinks} />
+
         <Switch>
 
-        {addedToCart && <AddedToCart removeAddedToCart = {removeAddedToCart} /> }
-          
+          {/* home sayfası route u  */}
           <Route exact path='/'>
             <Home />
           </Route>
 
+          {/* ana içeriklerin route ları */}
           <Route path='/wallArts'>
-            <WallArts addToCart={addToCart}/>
+            <WallArts addToCart={addToCart} />
           </Route>
 
           <Route path='/furniture'>
@@ -87,32 +83,35 @@ function App() {
             <Cars addToCart={addToCart} />
           </Route>
 
+          {/* footer linklerinin route ları */}
           <Route path='/about'>
-            <About/>
+            <About />
           </Route>
 
           <Route path='/contact'>
-            <Contact/>
+            <Contact />
           </Route>
 
           <Route path='/locations'>
-            <Locations/>
+            <Locations />
           </Route>
 
           <Route path='/giftCard'>
-              <GiftCard addToCart={addToCart} />
+            <GiftCard addToCart={addToCart} />
           </Route>
 
-           <Route path = '/buy'>
-             <BuyinPage cart = {cart} setCart={setCart} />
-           </Route> 
+          {/* sepetteki satın al butonundan sonra gelecek yer */}
+          <Route path='/buy'>
+            <BuyinPage cart={cart} setCart={setCart} />
+          </Route>
+
         </Switch>
-        <Footer bgClass='bg-dark'/>
+
+        <Footer bgClass='bg-dark' />
 
       </div>
 
     </Router>
-
 
   );
 }

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-function Footer({bgClass , addToCart}) {
+function Footer({ bgClass, addToCart }) {
 
     let emailValue = document.querySelector('#getEmailInput');
 
-    let giveMyEmail = (event)=>{
+    let giveMyEmail = (event) => {
         emailValue.value = "";
         alert('We just received your sell request. We would like to call you as soon as possible.');
         event.preventDefault();

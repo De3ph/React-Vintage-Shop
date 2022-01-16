@@ -1,6 +1,6 @@
 import AnimatedImage from "./AnimatedImg";
 
-const Hero = ({image_link, description_title, description_text})=>{
+const Hero = ({ image_link, description_title, description_text }) => {
 
     let width = '100%';
 
@@ -20,14 +20,14 @@ const Hero = ({image_link, description_title, description_text})=>{
                         </div>
                         <div className="col-md-5 w-100 h-75 d-flex align-items-center justify-content-end">
                             <p className='hero-text'>
-                            {description_text}
+                                {description_text}
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-     );
-    }
+    );
+}
 
 export default Hero;

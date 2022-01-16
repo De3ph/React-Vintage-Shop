@@ -5,13 +5,10 @@ import shop3img from '../../images/shops/shop3.jpg';
 import shop4img from '../../images/shops/shop4.jpeg';
 import shop5img from '../../images/shops/shop5.jpeg';
 
-let cityList = ['Paris','Kiev','Bucharest','Hamburg','Milano','Brussels','California','New York','Oslo','Manchester','London','Istanbul','Munich','Dortmund','Amsterdam','Rome','Moscow','St. Petersburg','Madrid','Ottowa'];
-
-
-function Locations(){
-    return(
+function Locations() {
+    return (
         <main>
-            <h2 className="text-center text-warning animate__animated animate__rotateInDownRight locationHeader">Locations</h2>
+            <h1 className="text-center text-warning animate__animated animate__rotateInDownRight locationHeader">Locations</h1>
             <div className="cityImages">
                 <h3>İstanbul</h3>
                 <img src={shop1img} alt="" className="cityImage" />
@@ -23,6 +20,9 @@ function Locations(){
                 <img src={shop4img} alt="" className="cityImage" />
                 <h3>Manchester</h3>
                 <img src={shop5img} alt="" className="cityImage" />
+                <div className="text-center fs-1 opacity-100">.</div>
+                <div className="text-center fs-1 opacity-75">.</div>
+                <div className="text-center fs-1 opacity-50">.</div>
             </div>
         </main>
     );

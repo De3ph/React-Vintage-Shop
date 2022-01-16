@@ -1,7 +1,7 @@
 import ItemTable from "../../components/ItemTable";
-import {GiftCard_datas} from "../../db/GiftCard_datas"
+import { GiftCard_datas } from "../../db/GiftCard_datas"
 
-function GiftCard({addToCart}) {
+function GiftCard({ addToCart }) {
 
     return (
         <main>
